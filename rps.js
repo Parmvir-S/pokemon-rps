@@ -9,3 +9,6 @@ function getGameDisplay() {
 window.addEventListener("click", getGameDisplay);
 window.addEventListener("keydown", getGameDisplay);
 
+function bam() {
+    console.log('bam')
+}

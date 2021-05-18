@@ -18,6 +18,11 @@ body {
     font-size: 1.3em;
 }
 
+button {
+    background-color: black;
+    border: none;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -28,19 +33,19 @@ body {
 .score {
     grid-column: 1/2;
     grid-row: 1/2;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .logo {
     grid-column: 2/3;
     grid-row: 2/3;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .relationships {
     grid-column: 2/3;
     grid-row: 3/4;
-    border: 2px solid white;
+    /* border: 1px solid white; */
     text-align: center;
 }
 
@@ -55,17 +60,17 @@ body {
 
 .squirtle {
     grid-column: 1/2;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .charmander {
     grid-column: 2/3;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .bulbasaur {
     grid-column: 3/4;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .match-text {
