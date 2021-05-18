@@ -1,0 +1,165 @@
+.load-screen {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.disappear {
+    visibility: hidden;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    font-size: 1.3em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(min-content, max-content);
+    grid-gap: 1em;
+}
+
+.score {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: 2px solid white;
+}
+
+.logo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border: 2px solid white;
+}
+
+.relationships {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.avatar-buttons {
+    grid-column: 1/4;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(min-content, max-content);
+    justify-items: center;
+}
+
+.squirtle {
+    grid-column: 1/2;
+    border: 2px solid white;
+}
+
+.charmander {
+    grid-column: 2/3;
+    border: 2px solid white;
+}
+
+.bulbasaur {
+    grid-column: 3/4;
+    border: 2px solid white;
+}
+
+.match-text {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .load {
+        width: 80%;
+    }
+
+    .load-screen {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 220px;
+        text-align: center;
+        z-index: 10;
+    }
+    .disappear {
+        visibility: hidden;
+    }
+    
+    body {
+        background-color: black;
+        color: white;
+        font-family: monospace;
+        font-size: 1.5em;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(min-content, max-content);
+        grid-gap: 1em;
+    }
+
+    .score {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        border: 2px solid white;
+    }
+    
+    .logo {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        border: 2px solid white;
+    }
+
+    .logoImg {
+        width: 70%;
+    }
+    
+    .relationships {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        border: 2px solid white;
+        text-align: center;
+    }
+    
+    .avatar-buttons {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: minmax(min-content, max-content);
+        justify-items: center;
+    }
+    
+    .squirtle {
+        grid-column: 1/2;
+        border: 2px solid white;
+        width: 85%;
+    }
+    
+    .charmander {
+        grid-column: 2/3;
+        border: 2px solid white;
+        width: 85%;
+    }
+    
+    .bulbasaur {
+        grid-column: 3/4;
+        border: 2px solid white;
+        width: 85%;
+    }
+    
+    .match-text {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        text-align: center;
+    }
+  }
