@@ -14,8 +14,11 @@
         <p>Hit Any Key Or Click To Play!</p>
     </div>
     <div class="container disappear">
-      <div class="score">
-        <p>Score: <span>0</span></p>
+      <div class="user-health">
+        <p>Your Health: <span id="userHP">100</span></p>
+      </div>
+      <div class="opp-health">
+        <p>Enemy Health: <span id="oppHP">100</span></p>
       </div>
       <div class="logo">
         <img
@@ -31,19 +34,19 @@
         <p>Bulbasaur > Squirtle</p>
       </div>
       <div class="avatar-buttons">
-        <button onclick="bam()"><img
+        <button type="button" id="squirtle" value="squirtle" onclick="userPokemon(value)"><img
           class="squirtle"
           src="images/squir.png"
           width="150"
           alt="squirtle"
         /></button>
-        <button><img
+        <button type="button" value="charmander" onclick="userPokemon(value)"><img
           class="charmander"
           src="images/char.png"
           width="150"
           alt="charmander"
         /></button>
-        <button><img
+        <button type="button" value="bulbasaur" onclick="userPokemon(value)"><img
           class="bulbasaur"
           src="images/bulb.png"
           width="150"
