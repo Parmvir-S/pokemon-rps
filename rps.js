@@ -21,15 +21,33 @@ let oppPokemon = () => {
 
 //Decrease health
 function decreaseUserHealth() {
-  userHealth = userHealth - 20;
+  userHealth -= 20;
   let userHP = document.querySelector("#userHP");
   userHP.innerHTML = userHealth;
+  if (userHealth < 0) {
+      userHealth = 100;
+      let userHP = document.querySelector("#userHP");
+      userHP.innerHTML = userHealth;
+      opponentHealth = 100;
+      let oppHP = document.querySelector("#oppHP");
+      oppHP.innerHTML = opponentHealth;
+      alert("You Lose")
+  }
 }
 
 function decreaseOppHealth() {
-  opponentHealth = opponentHealth - 20;
+  opponentHealth -= 20;
   let oppHP = document.querySelector("#oppHP");
   oppHP.innerHTML = opponentHealth;
+  if (opponentHealth < 0) {
+    userHealth = 100;
+    let userHP = document.querySelector("#userHP");
+    userHP.innerHTML = userHealth;
+    opponentHealth = 100;
+    let oppHP = document.querySelector("#oppHP");
+    oppHP.innerHTML = opponentHealth;
+    alert("You Win")
+}
 }
 
 function userPokemon(value) {
@@ -65,22 +83,4 @@ function userPokemon(value) {
 }
 
 userPokemon();
-// do {
-//     userPokemon()
-// } while (userHealth > 0 || opponentHealth > 0)
 
-// while (userHealth > 0 || opponentHealth > 0) {
-//   userPokemon();
-//   if (userHealth === 0 || opponentHealth === 0) {
-//     userHealth === 0 ? alert("You Lose the Game"): alert("You Win The Game");
-//     userHealth = 100;
-//     opponentHealth = 100;
-//     let play = confirm("Wanna play again? ");
-//     if (play === true) {
-//       userPokemon();
-//     } else if (play === false) {
-//       alert("Thanks for playing");
-//       break;
-//     }
-//   }
-// }
