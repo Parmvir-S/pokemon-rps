@@ -24,14 +24,14 @@ function decreaseUserHealth() {
   userHealth -= 20;
   let userHP = document.querySelector("#userHP");
   userHP.innerHTML = userHealth;
-  if (userHealth < 0) {
+  if (userHealth == 0) {
       userHealth = 100;
       let userHP = document.querySelector("#userHP");
       userHP.innerHTML = userHealth;
       opponentHealth = 100;
       let oppHP = document.querySelector("#oppHP");
       oppHP.innerHTML = opponentHealth;
-      alert("You Lose")
+      alert("You Lose!")
   }
 }
 
@@ -39,46 +39,46 @@ function decreaseOppHealth() {
   opponentHealth -= 20;
   let oppHP = document.querySelector("#oppHP");
   oppHP.innerHTML = opponentHealth;
-  if (opponentHealth < 0) {
+  if (opponentHealth == 0) {
     userHealth = 100;
     let userHP = document.querySelector("#userHP");
     userHP.innerHTML = userHealth;
     opponentHealth = 100;
     let oppHP = document.querySelector("#oppHP");
     oppHP.innerHTML = opponentHealth;
-    alert("You Win")
-}
+    alert("You Win!")
+  }
 }
 
 function userPokemon(value) {
   opp = oppPokemon();
   if (value == opp) {
     let displayText = document.querySelector(".match-text");
-    displayText.firstElementChild.innerHTML = `${value} and ${opp} exchanged equal blows --> It's a Tie!`;
+    displayText.firstElementChild.innerHTML = `Your ${value} and Enemy's ${opp} exchanged equal blows --> No Damage!`;
   } else if (value == "squirtle" && opp == "charmander") {
     decreaseOppHealth();
     let displayText = document.querySelector(".match-text");
-    displayText.firstElementChild.innerHTML = `${value} obliterates ${opp} --> ${opp} takes damage!`;
+    displayText.firstElementChild.innerHTML = `Your ${value} obliterates ${opp} --> Enemy takes damage!`;
   } else if (value == "squirtle" && opp == "bulbasaur") {
     decreaseUserHealth();
     let displayText = document.querySelector(".match-text");
-    displayText.firstElementChild.innerHTML = `${opp} destroys ${value} --> ${value} takes damage!`;
+    displayText.firstElementChild.innerHTML = `${opp} destroys your ${value} --> You take damage!`;
   } else if (value == "charmander" && opp == "bulbasaur") {
     decreaseOppHealth();
     let displayText = document.querySelector(".match-text");
-    displayText.firstElementChild.innerHTML = `${value} obliterates ${opp} --> ${opp} takes damage!`;
+    displayText.firstElementChild.innerHTML = `Your ${value} obliterates ${opp} --> Enemy takes damage!`;
   } else if (value == "charmander" && opp == "squirtle") {
     decreaseUserHealth();
     let displayText = document.querySelector(".match-text");
-    displayText.firstElementChild.innerHTML = `${opp} destroys ${value} --> ${value} takes damage!`;
+    displayText.firstElementChild.innerHTML = `${opp} destroys your ${value} --> You take damage!`;
   } else if (value == "bulbasaur" && opp == "squirtle") {
     decreaseOppHealth();
     let displayText = document.querySelector(".match-text");
-    displayText.firstElementChild.innerHTML = `${value} obliterates ${opp} --> ${opp} takes damage!`;
+    displayText.firstElementChild.innerHTML = `Your ${value} obliterates ${opp} --> Enemy takes damage!`;
   } else if (value == "bulbasaur" && opp == "charmander") {
     decreaseUserHealth();
     let displayText = document.querySelector(".match-text");
-    displayText.firstElementChild.innerHTML = `${opp} destroys ${value} --> ${value} takes damage!`;
+    displayText.firstElementChild.innerHTML = `${opp} destroys your ${value} --> You take damage!`;
   }
 }
 
